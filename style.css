@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Fustat:wght@200..800&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+:root {
+    --blue: #0f3bea;
+}
+body {
+    font-family: Fustat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0px 90px 0px;
+    border: 3px dashed var(--blue);
+    width: 300px;
+    margin: 15px;
+    max-height: 100vh;
+}
+
+.container-right {
+    background-image: url("src/bg.png");
+    background-size: 350px;
+    width: calc(100% - 395px);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.profile {
+    width: 100px;
+    margin: 0px;
+}
+
+.antuntune {
+    font-family: Borel;
+    font-size: 1.7rem;
+    margin: 0;
+    font-weight: 400;
+}
+.main-info i {
+    padding-right: 10px;
+    font-size: 0.9rem;
+    color: var(--blue);
+}
+.link-icons-main {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.link-icons-main i:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.container-right h2 {
+    color: var(--blue);
+    font-weight: 950;
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+.cv-button {
+    width: 152px;
+    height: 35px;
+    margin-top: 30px;
+    background: linear-gradient(180deg, var(--blue) 0%, #133ad5 100%);
+    border: 1px solid #274de5;
+    box-shadow: 1px 2px 1.6px rgba(0, 0, 0, 0.2);
+    border-radius: 11px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.cv-button:hover {
+    cursor: pointer;
+}
+
+.cv-button i {
+    padding-right: 8px;
+}
+
+.card {
+    width: 300px;
+    height: 310px;
+    border: 5px solid #121212;
+    box-shadow: 9px 8px 0px #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+    transition:
+        transform 200ms,
+        box-shadow 200ms;
+}
+
+.card:hover {
+    transform: translate(7px, 7px);
+    box-shadow: 2px 1px 0px #000000;
+    cursor: pointer;
+}
+.project-name {
+    padding: 5px 3px;
+    color: white;
+    font-weight: 950;
+    font-size: 1.1rem;
+}
+.project-tech {
+    background-color: black;
+    color: white;
+    font-weight: 950;
+}
+.project-description {
+    font-size: 0.8rem;
+    background-color: white;
+    font-weight: 500;
+    padding: 8px 8px;
+    border-top: solid #000000 4px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card-wash .project-name {
+    background-color: #0f3bea;
+}
+.card-wash {
+    background-image: url(src/card-wash.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.card-denkaweb .project-name {
+    background-color: #EA750F;
+}
+.card-denkaweb {
+    background-image: url(src/card-denkaweb.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-denka .project-name {
+    background-color: #EAB00F;
+}
+.card-denka {
+    background-image: url(src/card-denka.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-teamsmic .project-name {
+    background-color: #EAB00F;
+}
+.card-teamsmic {
+    background-image: url(src/card-teamsmic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 0px 90px 0px;
+        border: 3px dashed var(--blue);
+        width: 100%;
+        margin: 15px;
+    }
+
+    .container-right {
+        background-image: url("src/bg.png");
+        background-size: 350px;
+        padding-left: 30px;
+        padding-top: 30px;
+        width: 100%;
+    }
+    .card-grid {
+        justify-content: center;
+    }
+}
