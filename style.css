@@ -68,7 +68,7 @@ body {
 
 .link-icons-main i:hover {
     cursor: pointer;
-    color: var(--blue);
+    color: black;
 }
 .link-icons-main a:visited {
     cursor: pointer;
@@ -98,13 +98,16 @@ body {
 }
 .cv-button:hover {
     cursor: pointer;
+    background: linear-gradient(180deg, #2b4edd, #0a31ca);
+    font-weight: 600;
 }
 
 .cv-button i {
     padding-right: 8px;
+
 }
 
-.card {
+.card, .card:visited {
     width: 300px;
     height: 310px;
     border: 5px solid #121212;
@@ -120,6 +123,16 @@ body {
         box-shadow 200ms;
 
     
+}
+
+a > *{
+    text-decoration: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: black;
+
 }
 
 .card:hover {
@@ -193,6 +206,16 @@ body {
 }
 .card-teamsmic {
     background-image: url(src/card-teamsmic.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-biber .project-name {
+    background-color: #006B3C;
+}
+.card-biber {
+    background-image: url(src/card-biber.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
