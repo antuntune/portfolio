@@ -26,11 +26,13 @@ body {
     width: 300px;
     margin: 15px;
     max-height: 100vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.916);
 }
 
 .container-right {
     background-image: url("src/bg.png");
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    background-blend-mode: lighten; /* Optional: blend mode */
     background-size: 350px;
     width: calc(100% - 415px);
     padding-left: 30px;
@@ -244,3 +246,13 @@ a, a:visited{
         justify-content: center;
     }
 }
+
+#canvas {
+    
+    position: fixed;  /* Position fixed to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;     /* Cover full width of viewport */
+    height: 100vh;    /* Cover full height of viewport */
+    z-index: -1;      /* Ensure it is below other content */
+  }
