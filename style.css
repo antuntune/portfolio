@@ -223,6 +223,17 @@ a, a:visited{
     background-repeat: no-repeat;
 }
 
+
+.card-management .project-name {
+    background-color: #4F39F6;
+}
+.card-management {
+    background-image: url(src/card-management.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @media only screen and (max-width: 768px) {
     .container-left {
         display: flex;
