@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Borel&family=Fustat:wght@200..800&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+
 :root {
     --blue: #0f3bea;
 }
+
 body {
     font-family: Fustat;
     margin: 0px;
@@ -31,8 +33,10 @@ body {
 
 .container-right {
     background-image: url("src/bg.png");
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
-    background-blend-mode: lighten; /* Optional: blend mode */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* White with 50% opacity */
+    background-blend-mode: lighten;
+    /* Optional: blend mode */
     background-size: 350px;
     width: calc(100% - 415px);
     padding-left: 30px;
@@ -57,11 +61,13 @@ body {
     margin: 0;
     font-weight: 400;
 }
+
 .main-info i {
     padding-right: 10px;
     font-size: 0.9rem;
     color: var(--blue);
 }
+
 .link-icons-main {
     display: flex;
     gap: 14px;
@@ -72,6 +78,7 @@ body {
     cursor: pointer;
     color: black;
 }
+
 .link-icons-main a:visited {
     cursor: pointer;
     color: var(--blue);
@@ -83,6 +90,7 @@ body {
     text-decoration: underline;
     font-size: 1.8rem;
 }
+
 .cv-button {
     width: 152px;
     height: 35px;
@@ -98,6 +106,7 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
 }
+
 .cv-button:hover {
     cursor: pointer;
     background: linear-gradient(180deg, #2b4edd, #0a31ca);
@@ -109,7 +118,8 @@ body {
 
 }
 
-.card, .card:visited {
+.card,
+.card:visited {
     width: 300px;
     height: 310px;
     border: 5px solid #121212;
@@ -124,14 +134,15 @@ body {
         transform 200ms,
         box-shadow 200ms;
 
-    
+
 }
 
-a > *{
+a>* {
     text-decoration: none;
 }
 
-a, a:visited{
+a,
+a:visited {
     text-decoration: none;
     color: black;
 
@@ -143,17 +154,20 @@ a, a:visited{
     cursor: pointer;
     opacity: 1;
 }
+
 .project-name {
     padding: 5px 3px;
     color: white;
     font-weight: 950;
     font-size: 1.1rem;
 }
+
 .project-tech {
     background-color: black;
     color: white;
     font-weight: 950;
 }
+
 .project-description {
     font-size: 0.8rem;
     background-color: white;
@@ -176,6 +190,7 @@ a, a:visited{
 .card-wash .project-name {
     background-color: #0f3bea;
 }
+
 .card-wash {
     background-image: url(src/card-wash.png);
     background-size: cover;
@@ -187,15 +202,18 @@ a, a:visited{
 .card-denkaweb .project-name {
     background-color: #EA750F;
 }
+
 .card-denkaweb {
     background-image: url(src/card-denkaweb.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .card-denka .project-name {
     background-color: #EAB00F;
 }
+
 .card-denka {
     background-image: url(src/card-denka.png);
     background-size: cover;
@@ -206,6 +224,7 @@ a, a:visited{
 .card-teamsmic .project-name {
     background-color: #464EB8;
 }
+
 .card-teamsmic {
     background-image: url(src/card-teamsmic.png);
     background-size: cover;
@@ -216,6 +235,7 @@ a, a:visited{
 .card-biber .project-name {
     background-color: #006B3C;
 }
+
 .card-biber {
     background-image: url(src/card-biber.png);
     background-size: cover;
@@ -227,6 +247,7 @@ a, a:visited{
 .card-management .project-name {
     background-color: #4F39F6;
 }
+
 .card-management {
     background-image: url(src/card-management.png);
     background-size: cover;
@@ -253,17 +274,106 @@ a, a:visited{
         padding-top: 30px;
         width: 100%;
     }
+
     .card-grid {
         justify-content: center;
     }
 }
 
 #canvas {
-    
-    position: fixed;  /* Position fixed to cover the viewport */
+
+    position: fixed;
+    /* Position fixed to cover the viewport */
     top: 0;
     left: 0;
-    width: 100vw;     /* Cover full width of viewport */
-    height: 100vh;    /* Cover full height of viewport */
-    z-index: -1;      /* Ensure it is below other content */
-  }
+    width: 100vw;
+    /* Cover full width of viewport */
+    height: 100vh;
+    /* Cover full height of viewport */
+    z-index: -1;
+    /* Ensure it is below other content */
+}
+
+/* Turnstile Challenge Overlay */
+.challenge-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.challenge-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.challenge-container {
+    text-align: center;
+    padding: 40px;
+    border: 3px dashed var(--blue);
+    background-color: rgba(255, 255, 255, 0.98);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeInScale 0.5s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.challenge-container h2 {
+    color: var(--blue);
+    font-weight: 950;
+    text-decoration: underline;
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+}
+
+.challenge-container p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Turnstile Widget Container */
+.cf-turnstile {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.challenge-error {
+    color: #dc3545;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* Main Content */
+.main-content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.main-content.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 100vh;
+    overflow: hidden;
+}
